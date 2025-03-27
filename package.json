@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A simple desktop weather app using Electron and Open Meteo API",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^25.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
+

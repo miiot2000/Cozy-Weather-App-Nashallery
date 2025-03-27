@@ -1,0 +1,94 @@
+@keyframes spriteAnimation {
+    0%, 100% { background-image: url('pochacco1.png'); }  /* Frame 1 */
+    11% { background-image: url('pochacco2.png'); }  /* Frame 2 */
+    22% { background-image: url('pochacco3.png'); }  /* Frame 3 */
+    33% { background-image: url('pochacco2.png'); }  /* Reuse Frame 2 */
+    44% { background-image: url('pochacco1.png'); }  /* Reuse Frame 1 */
+    55% { background-image: url('pochacco4.png'); }  /* Frame 4 */
+    66% { background-image: url('pochacco5.png'); }  /* Frame 5 */
+    77% { background-image: url('pochacco4.png'); }  /* Reuse Frame 4 */
+    88% { background-image: url('pochacco1.png'); }  /* Reuse Frame 1 */
+}
+
+@keyframes fireflyAnimation {
+    0%, 100% { background-image: url('firefly1.PNG'); }  /* Frame 1 */
+    50% {background-image: url('firefly2.PNG'); }
+
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    background-size: cover; /* Ensure the background image covers the whole screen */
+    background-position: center; /* Center the background image */
+    transition: background-image 1s ease-in-out; /* Smooth transition for background change */
+    position: relative; /* Positioning context for child elements */
+}
+
+/* Sprite container */
+.sprite-container {
+    display: flex;
+    flex-direction: column;  /* Stack the sprite and text box vertically */
+    align-items: center;     /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center;      /* Center the text in the text box */
+    position: relative;
+    z-index: 0;           
+}
+
+
+.sprite {
+    width: 250px;  /* Adjust based on frame size */
+    height: 250px;
+    background-size: cover;
+    animation: spriteAnimation 4s steps(9) infinite;}
+
+/* Pixelated text box */
+.text-box {
+    margin-top: 0;               /* Add space between the sprite and text box */
+    padding: 10px;
+    background-color: #fff;         /* White background inside the text box */
+    color: #000;                    /* Black text color */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;                /* Adjust font size to look more pixelated */
+    border: 3px solid #000;         /* Black border around the text box */
+    border-radius: 20px;            /* Rounded corners with 20px radius */
+    box-shadow: 0 0 10px #fff;      /* Optional: Add glowing effect */
+}
+
+/* Container for the temperature display */
+.temperature-box {
+    position: absolute;
+    top: 20%;  
+    left: 5%;  
+    background-image: url('firefly1.PNG'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;  /* Adjusted to fit text */
+    height: 135px; /* Make it a perfect circle */
+    display: flex;  
+    align-items: center;  /* Centers text vertically */
+    justify-content: center;  /* Centers text horizontally */
+    color: orange;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px; /* Keep text small */
+    text-align: center;
+    padding: 5px; /* Add some spacing inside the box */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+    z-index: 2;
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 135px;
+    animation: fireflyAnimation 2s infinite alternate ease-in-out;
+
+}
+
+#temperature {
+    font-size: 14px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: orange;
+    line-height: 1.2;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Weather App</h1>
+    <p id="weather">Loading...</p>
+    <div id="time"></div>
+    <!-- Sprite container with text box -->
+    <div class="sprite-container">
+        <div class="sprite"></div> <!-- Sprite animation -->
+        <div id="text-box" class="text-box">Loading weather condition...</div> <!-- Pixelated text box for weather condition -->
+    </div>
+
+    <div class="background-container">
+        <!-- Temperature display container -->
+        <div id="temperature-box" class="temperature-box">
+            <span id="temperature">Loading temperature...</span>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

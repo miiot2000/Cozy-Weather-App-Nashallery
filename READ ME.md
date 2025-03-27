@@ -1,4 +1,5 @@
 # Weather App
+Author: Manning Tran
 
 ## Overview
 This is a custom weather displaying desktop application. The app fetches real-time weather data and displays it in a pixel-art style. The project is inspired by TikTok user Nashallery and her videos on cozy HTML, CSS, and JavaScript coding.
